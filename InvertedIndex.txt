@@ -1,6 +1,8 @@
 Inverted index
 
-An inverted index is an index data structure storing a mapping from content, such as wordsto its locations in a database file, or in a document or a set of documents. The purpose of an inverted index is to allow fast full text searches, at a cost of increased processing when a document is added to the database. It is the most popular data structure used in search engines. 
+An inverted index is an index data structure storing a mapping from content, such as wordsto its locations in a database file,
+or in a document or a set of documents. The purpose of an inverted index is to allow fast full text searches, 
+at a cost of increased processing when a document is added to the database. It is the most popular data structure used in search engines. 
 
 Inverted Index Example
 
@@ -16,7 +18,9 @@ We have the following inverted file index, the integers in {} refer to the their
 A term search for the terms "what", "is" and "it" would give
 -> {0,1} intersect {0,1,2} intersect {0,1,2} = {0,1}.
 
-With the same texts, we get the following full inverted index, where the pairs are document numbers and local word numbers. Like the document numbers, local word numbers also begin with zero. So, "banana": {(2, 3)} means the word "banana" is in the third document (T2), and it is the fourth word in that document (position 3).
+With the same texts, we get the following full inverted index, where the pairs are document numbers and local word numbers. 
+Like the document numbers, local word numbers also begin with zero. So, "banana": {(2, 3)} means the word "banana" is in 
+the third document (T2), and it is the fourth word in that document (position 3).
 
 "a": {(2, 2)}
 "banana": {(2, 3)}
@@ -24,13 +28,21 @@ With the same texts, we get the following full inverted index, where the pairs a
 "it": {(0, 0), (0, 3), (1, 2), (2, 0)} 
 "what": {(0, 2), (1, 0)}
 
-If we run a phrase search for "what is it" we get hits for all the words in both document 0 and 1. But the terms occur consecutively only in document 1.
+If we run a phrase search for "what is it" we get hits for all the words in both document 0 and 1. But the terms occur 
+consecutively only in document 1.
 
 Inverted Index Applications
 
-The inverted index data structure is a central component of a typical search engine indexing algorithm. A goal of a search engine implementation is to optimize the speed of the query: find the documents where word X occurs. Once a forward index is developed, which stores lists of words per document, it is next inverted to develop an inverted index. Querying the forward index would require sequential iteration through each document and to each word to verify a matching document. The time, memory, and processing resources to perform such a query are not always technically realistic. Instead of listing the words per document in the forward index, the inverted index data structure is developed which lists the documents per word.
+The inverted index data structure is a central component of a typical search engine indexing algorithm. A goal of a search 
+engine implementation is to optimize the speed of the query: find the documents where word X occurs. Once a forward index 
+is developed, which stores lists of words per document, it is next inverted to develop an inverted index. Querying the 
+forward index would require sequential iteration through each document and to each word to verify a matching document. 
+The time, memory, and processing resources to perform such a query are not always technically realistic. 
+Instead of listing the words per document in the forward index, the inverted index data structure is developed which lists 
+the documents per word.
 
-With the inverted index created, the word to document mapping can be stored in hashmap and the query can now be resolved by jumping to the word id (via random access) in the inverted index.
+With the inverted index created, the word to document mapping can be stored in hashmap and the query can now be resolved by 
+jumping to the word id (via random access) in the inverted index.
 
 References -
 http://nlp.stanford.edu/IR-book/html/htmledition/a-first-take-at-building-an-inverted-index-1.html
