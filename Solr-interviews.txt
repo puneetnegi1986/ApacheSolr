@@ -1,0 +1,134 @@
+What is Apache Solr?
+
+Apache Solr is a standalone full-text search platform to perform searches on multiple websites and index documents using XML and HTTP. Built on a Java Library called Lucence, Solr supports a rich schema specification for a wide range and offers flexibility in dealing with different document fields. It also consists of an extensive search plugin API for developing custom search behavior.
+
+What file contains configuration for data directory?
+
+Solrconfig.xml file contains configuration for data directory.
+
+What file contains definition of the field types and fields of documents?
+
+schema.xml file contains definition of the field types and fields of documents.
+
+What are the features of Apache Solr?
+
+Allows Scalable, high performance indexing Near real-time indexing
+Standards-based open interfaces like XML, JSON and HTTP
+Flexible and adaptable faceting
+Advanced and Accurate full-text search
+Linearly scalable, auto index replication, auto fail over and recovery
+-Allows concurrent searching and updating
+Comprehensive HTML administration interfaces
+Provides cross-platform solutions that are index-compatible
+What is Apache Lucene?
+
+Supported by Apache Software Foundation, Apache Lucene is a free, open-source, high-performance text search engine library written in Java by Doug Cutting. Lucence facilitates full-featured searching, highlighting, indexing and spellchecking of documents in various formats like MS Office docs, HTML, PDF, text docs and others.
+
+Interested in mastering Apache SOLR Training? Enroll now for FREE demo on SOLR Training.
+What is request handler?
+
+When a user runs a search in Solr, the search query is processed by a request handler. SolrRequestHandler is a Solr Plugin, which illustrates the logic to be executed for any request.Solrconfig.xml file comprises several handlers (containing a number of instances of the same SolrRequestHandler class having different configurations).
+
+What are the advantages and disadvantages of Standard Query Parser?
+
+Also known as Lucence Parser, the Solr standard query parser enables users to specify precise queries through a robust syntax. However, the parser’s syntax is vulnerable to many syntax errors unlike other error-free query parsers like DisMax parser.
+
+Apache Solr is a standalone full-text search platform to perform searches on multiple websites and index documents using XML and HTTP. Built on a Java Library called Lucence, Solr supports a rich schema specification for a wide range and offers flexibility in dealing with different document fields. It also consists of an extensive search plugin API for developing custom search behavior.
+
+What file contains configuration for data directory?
+
+Solrconfig.xml file contains configuration for data directory.
+
+What file contains definition of the field types and fields of documents?
+
+schema.xml file contains definition of the field types and fields of documents.
+
+What are the features of Apache Solr?
+
+Allows Scalable, high performance indexing Near real-time indexing
+Standards-based open interfaces like XML, JSON and HTTP
+Flexible and adaptable faceting
+Advanced and Accurate full-text search
+Linearly scalable, auto index replication, auto failover and recovery
+Allows concurrent searching and updating
+Comprehensive HTML administration interfaces
+Provides cross-platform solutions that are index-compatible
+What is Apache Lucene?
+
+Supported by Apache Software Foundation, Apache Lucene is a free, open-source, high-performance text search engine library written in Java by Doug Cutting. Lucence facilitates full-featured searching, highlighting, indexing and spellchecking of documents in various formats like MS Office docs, HTML, PDF, text docs and others.
+
+What is request handler?
+
+When a user runs a search in Solr, the search query is processed by a request handler. SolrRequestHandler is a Solr Plugin, which illustrates the logic to be executed for any request.Solrconfig.xml file comprises several handlers (containing a number of instances of the same SolrRequestHandler class having different configurations).
+
+What are the advantages and disadvantages of Standard Query Parser?
+
+Also known as Lucence Parser, the Solr standard query parser enables users to specify precise queries through a robust syntax. However, the parser’s syntax is vulnerable to many syntax errors unlike other error-free query parsers like DisMax parser.
+
+What is Highlighting?
+
+Highlighting Is nothing but the Fragmentation of documents corresponding to the user’s query that is included in the Query response. Afterwards,  these fragments are displayed and placed in the special segment, that is used by the users and clients to present the snippets. The Solr contains a number of highlighting utilities and has control over various fields. The highlighting utilities can be called by Handlers of Request and can be reused with the standard query parsers.
+
+What is SolrCloud?
+
+The Apache Solr provides high scalable searching capabilities, which allows users to get a highly available cluster of Solr servers and provides fault tolerance. These capabilities of Apache Solr are known as SolrCloud.
+
+Explain Faceting in Solr?
+
+The Faceting refers to the categorization and arrangement of all search results that depends upon the index terms. The Faceting process makes the searching task more fluent as the users search for the exact results.
+
+What is Apache Lucene?
+
+The Apache Lucene is an open source, free and high performance text search engine library, that  is written in Java by Doug Cutting and it is supported by Apache software Foundation. The Lucene provides highlighting, spell checking, indexing and full-featured searching of documents in different formats such as PDF,MS Office docs, text docs, HTML and others.
+
+What is the use of Tokenizer?
+
+The Tokenizer is used to break a stream of text into a series of Tokens, where each Token is an arrangement of characters in the text. The Token that is developed is then passed to the Token Filters which can update, remove and add the Tokens. Afterwards, that field is indexed by the resulting Token stream.
+
+What data is declared by Schema?
+
+The data declared by a Schema:
+
+What fields are required.
+What types of fields are available.
+What field must be used as the primary/unique key.
+How to search and index each field.
+What are the advantages and disadvantages of the Standard Query Parser?
+
+The Solr standard query parser is also known as Lucene Parser, that helps users to determine precise queries with the help of a robust syntax. The parser’s syntax is very weak to many syntax errors unlike the other error-free query parsers like DisMax parser.
+
+Define Dynamic Fields?
+
+If the user forgets  to define one or more fields, then the Dynamic Fields are a useful feature. They offer excellent flexibility to index fields that is not explicitly defined in the schema.
+
+How to install Solr?
+
+The three steps of Installation are:
+
+Server-related files, e.g. Tomcat or start.jar (Jetty)
+Solr webapp as a .war
+Solr Home which comprises the data directory and configuration files
+What are the important configuration files of Solr?
+
+Solr supports two important configuration files
+solrconfig.xml
+ schema.xml
+What are the most common elements in solrconfig.xml?
+
+The most common elements in solrconfig.xml are:
+
+Search components
+Cache parameters
+Data directory location
+Request handlers
+How to shut down Apache Solr?
+
+Solr is shut down from the same terminal where it was launched. Click Ctrl+C to shut it down.
+
+Give the syntax to start the server.
+
+$ bin/solr start is used to start the server.
+
+What syntax is used to check whether Solr is currently running or not?
+
+$ bin/solr status is used to check Solr running status.
