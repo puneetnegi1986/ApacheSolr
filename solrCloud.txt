@@ -1,0 +1,33 @@
+One of the things you learn when attending Sematext Solr training is how to scale Solr. We discuss various topics 
+regarding leader shards and their replicas – things like when to go for more leaders, when to go for more replicas 
+and when to go for both. We discuss what you can do with them, how to control their creation and work with them.
+In this blog entry I would like to focus on one of the mentioned aspects – handling replica creation in SolrCloud. 
+Note that while this is not limited to Solr on Docker deployment, if you are considering running Solr in Docker 
+containers you will want to pay attention to this.
+
+
+The Basics
+When creating a collection in SolrCloud we can adjust the creation command. Some of the parameters are mandatory, 
+some of them have defaults and can be overwritten. The two main parameters we are interested in are the number of
+shards and the replication factor. The former tells Solr how to divide the collection – how many distinct pieces
+(shards) our collection will be split into. For example, if we say that we want to have four shards Solr will
+divide the collection into four pieces, with each piece having about 25% of the documents. The replication 
+factor on the other hand dictates the number of physical copies that each shard will have. So, when replication
+factor is set to 1, only leader shards will be created. If replication factor is set to 2 each leader will have
+one replica, if replication factor is set to 3 each leader will have two replicas and so on.
+
+By default, Solr will put one shard of a collection on a given node. If we want to have more shards than the number
+of nodes we have in the SolrCloud cluster, we need to adjust the behavior, which we also can do by using Collections
+API. Of course, Solr will try to spread the shards evenly around the cluster, but we can also adjust that behavior 
+by telling Solr on which nodes shards should be created.
+
+Let’s look at this next. For the purpose of showing you how all of this works, I’ll use Docker and Docker Compose.
+I’ll launch four containers with SolrCloud and one container with ZooKeeper. I’ll use the following docker-compose.yml
+file:
+
+Start all containers by running:
+
+$ docker-compose up
+
+
+https://sematext.com/blog/2016/10/19/handling-shards-in-solrcloud/
