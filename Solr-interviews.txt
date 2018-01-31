@@ -28,7 +28,6 @@ Supported by Apache Software Foundation, Apache Lucene is a free, open-source, h
 Java by Doug Cutting. Lucence facilitates full-featured searching, highlighting, indexing and spellchecking of documents in various 
 formats like MS Office docs, HTML, PDF, text docs and others.
 
-Interested in mastering Apache SOLR Training? Enroll now for FREE demo on SOLR Training.
 What is request handler?
 
 When a user runs a search in Solr, the search query is processed by a request handler. SolrRequestHandler is a Solr Plugin, which 
